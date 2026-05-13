@@ -48,16 +48,41 @@ html, body{
     }
 
     .btn-solid{
-        @apply px-6 active:scale-95 -3 transition bg-solid border border-gray-500/20 text-white text-sm font-semibold rounded-full cursor-pointer
+        @apply px-6 py-3 active:scale-95 py-3 transition bg-solid border border-gray-500/20 text-white text-sm font-semibold  cursor-pointer
     }
     .btn-light{
-        @apply px-6 active:scale-95 activnsition bg-solid border border-gray-500/20 text-white text-sm font-semibold rounded-full cursor-pointer
+        @apply px-6 py-3 active:scale-95 py-3 transition bg-gray-500/10 border border-gray-500/20 text-sm font-semibold rounded-full cursor-pointer
     }
     .btn-outline{
-        @apply px-6 active:scale-95 activnsition bg-solid border border-gray-500/20 text-white text-sm font-semibold rounded-full cursor-pointer
+        @apply px-6 py-3 active:scale-95 transition border border-gray-500/20 text-sm font-semibold rounded-full cursor-pointer
     }
     .btn-white{
-        @apply px-6 active:scale-95 activnsition bg-solid border border-gray-500/20 text-white text-sm font-semibold rounded-full cursor-pointer
+        @apply px-6 py-3 active:scale-95 transition bg-white border border-gray-500/20 text-sm font-semibold rounded-full cursor-pointer
+    }
+}
+
+@layer utilities{
+    .active-link{
+        @apply relative after:w-2/5 after:h-1 after:rounded-full after:bg-solid after:absolute after:bottom-0.5 after:right-3 
+    }
+
+    h1{
+        @apply text-[38px] md:text-[44px] font-bold;
+    }
+     h2{
+        @apply text-[31px] md:text-[38px] font-bold;
+    }
+     h3{
+        @apply text-[24px] md:text-[31px] font-bold;
+    }
+     h4{
+        @apply text-[17px] md:text-[19px] font-bold;
+    }
+     h5{
+        @apply text-[15px] md:text-[16px] font-bold;
+    }
+    p{
+        @apply leading-[1.3] text-[14px] text-gray-50;
     }
 }
 
