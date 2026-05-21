@@ -48,11 +48,20 @@ const Header = () => {
             </div>
             </div>
             {/*Menu toggle*/}
+          <>
             {menuOpened ? (
               <img src ={assets.close} alt="" className={'lg:hidden cursor-pointer text-xl'} />
             ) : (
               <img src ={assets.menu} alt="" className={'lg:hidden cursor-pointer text-xl'} />
             )}
+          </>
+          {/*user Profile*/}
+          <div>
+            <button className='btn-solid bg-black flexCenter gap-2 rounded-full'> 
+              Login
+              <img src={assets.user} alt=''  />
+            </button>
+          </div>
           </div>
         </div>
       </div>
