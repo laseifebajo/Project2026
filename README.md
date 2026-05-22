@@ -1,20 +1,33 @@
 <<<<<<< HEAD
-# React + Vite
+GalwayRental
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Galway Rental is a global driven car rental application that allows users to browse luxury and everyday vehicles, explore detailed listings, and create customer accounts through a modern authentication system.
 
-Currently, two official plugins are available:
+The platform is designed with a responsive user interface and dynamic backend integration, giving users a realistic online vehicle rental experience similar to modern automotive marketplaces.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application combines:
 
-## React Compiler
+a React frontend,
+an Express.js backend,
+a MySQL database,
+and REST API communication.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## Technology Stack
+# Frontend
+React.Js
+React Router Dom
+TailWind CSS
+JavScript
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Project2026
+# Backend
+Node js
+Express js
+
+# DataBase
+MySQL
+
+
+
+
 >>>>>>> 1691a292762cdbf57d06d0b00a77d45a508baa7b
