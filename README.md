@@ -58,7 +58,7 @@ The front end runs on http://localhost:5173
 
 # Featured cars
 -Automatic sliding
--Resposive ayout
+-Resposive layout
 -Interactive navigation
 
 # Search Functionality
