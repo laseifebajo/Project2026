@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-GalwayRental
+
+## GalwayRental
 
 Galway Rental is a global driven car rental application that allows users to browse luxury and everyday vehicles, explore detailed listings, and create customer accounts through a modern authentication system.
 
