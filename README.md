@@ -84,7 +84,7 @@ Cars can be sorted by
 -Lowest price
 -Highest Price
 
-# Athentication System
+# Authentication System
 This app includes
 -User signUp
 -User Login
