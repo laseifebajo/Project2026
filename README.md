@@ -15,13 +15,13 @@ and REST API communication.
 
 ## Technology Stack
 # Frontend
-React.Js
-React Router Dom
-TailWind CSS
-JavScript
+React.Js,
+React Router Dom,
+TailWind CSS,
+JavScript,
 
 # Backend
-Node js
+Node js,
 Express js
 
 # DataBase
@@ -30,4 +30,3 @@ MySQL
 
 
 
->>>>>>> 1691a292762cdbf57d06d0b00a77d45a508baa7b
