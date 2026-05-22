@@ -2,58 +2,114 @@ import React from 'react'
 import { assets } from '../assets/assets/data'
 import { useNavigate } from 'react-router-dom'
 
-const Item = ({car}) => {
-    const currency = "€"
-    const navigate = useNavigate()
-    //colors to cycle through
-    const colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#33FFF5"];
-    // compute an index from product._id parseInt fallback to 0 for safety
-    const bgColor = colors[parseInt(car._id?.slice(-4) || "0", 16) % colors.length];
+const Item = ({ car }) => {
 
+  const navigate = useNavigate()
+  const currency = "€"
+
+  const colors = [
+    "#FFE5E0",
+    "#E6FFE8",
+    "#E5ECFF",
+    "#FBE5FF",
+    "#E5FFFD",
+  ]
+
+  const bgColor =
+    colors[(car._id?.length || 0) % colors.length]
+
+
+    console.log(car.title, car.images)
   return (
-  <div
-    onClick={() => {
-      navigate("/listing/" +car._id);
-      scrollTo(0, 0);
-    }}
-    className="block rounded-lg ring-1 ring-slate-900/5 p-5 cursor pointer"
-    style={{ backgroundColor: bgColor }}
-  >
-    <h4 className='line-clamp-1'>{car.title}</h4>
-    <div className='flex-between'>
-      <h5 className='my-1 text-gray-50'>{car.bodyType}</h5>
 
-      <div className='text-sm font-bold text-solid'>
-        {currency}
-        {car.price.sale} | {currency}
-        {car.price.rent}.00
-        <span className="text-xs">/day</span>
+    <div
+      onClick={() => {
+        navigate(`/listing/${car._id}`)
+        scrollTo(0, 0)
+      }}
+      className='rounded-xl p-5 cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1'
+      style={{ backgroundColor: bgColor }}
+    >
+
+      {/* TITLE */}
+      <h4 className='font-semibold text-lg line-clamp-1'>
+        {car.title}
+      </h4>
+
+      {/* TYPE + PRICE */}
+      <div className='flex justify-between items-center mt-2'>
+
+        <h5 className='text-gray-700'>
+          {car.bodyType}
+        </h5>
+
+        <div className='text-sm font-bold text-black'>
+          {currency}{car.price?.rent || 0}
+          <span className='text-xs font-normal'>
+            /day
+          </span>
+        </div>
+
       </div>
-    </div>
-  { /*Image*/ }
-  <div className='relative py-6'>
-    <img src={car.images[0]} alt={car.title} />
- </div>
- {/* Info */ }
- <div>
-    <p>
-        <img src={assets.transmission} alt='' width={19} />
-        {car.specs.transmission}
-    </p>
-    <hr/>
-    <p>
-        <img src={assets.seats} alt='' width={23} />
-        {car.specs.seats} seats
-    </p>
-    <hr/>
-    <p>
-        <img src={assets.fuel} alt='' width={19} />
-        {car.specs.fuelType}
-    </p>
- </div>
-    </div>
 
-)
+      {/* IMAGE */}
+      <div className='flex justify-center py-6'>
+
+        <img
+          src={car.images?.[0] || "/fallback-car.png"}
+          alt={car.title}
+          className='max-h-[140px] object-contain'
+        />
+
+      </div>
+
+      {/* SPECS */}
+      <div className='space-y-3 text-sm'>
+
+        <div className='flex items-center gap-2'>
+          <img
+            src={assets.transmission}
+            alt=""
+            width={18}
+          />
+
+          <span>
+            {car.specs?.transmission || "Automatic"}
+          </span>
+        </div>
+
+        <hr />
+
+        <div className='flex items-center gap-2'>
+          <img
+            src={assets.seats}
+            alt=""
+            width={20}
+          />
+
+          <span>
+            {car.specs?.seats || 4} Seats
+          </span>
+        </div>
+
+        <hr />
+
+        <div className='flex items-center gap-2'>
+          <img
+            src={assets.fuel}
+            alt=""
+            width={18}
+          />
+
+          <span>
+            {car.specs?.fuelType || "Petrol"}
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  )
 }
 
 export default Item
