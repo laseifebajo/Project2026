@@ -26,6 +26,10 @@ Express js
 
 # DataBase
 MySQL
+<img width="464" height="302" alt="image" src="https://github.com/user-attachments/assets/91e5b391-fd88-4884-8454-c6e51f826d82" />
+<img width="941" height="442" alt="image" src="https://github.com/user-attachments/assets/1e32d269-4208-4766-88f5-e1219f0bfeff" />
+
+
 
 
 
